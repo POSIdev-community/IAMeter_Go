@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>GO IAmeter</title>
+</head>
+<body>
+<ul>
+    {{ range . }}
+    <li>
+        {{ .Name }}
+        <ul>
+            {{ range .Links }}
+            <li><a href={{ .Url }}> {{ .Classification }} </a></li>
+            {{ end }}
+        </ul>
+    </li>
+    {{ end }}
+</ul>
+</body>
+</html>
